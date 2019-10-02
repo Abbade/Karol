@@ -8,7 +8,7 @@ namespace HumanResources.Models
 
     public partial class LOCATIONS
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+       
         public LOCATIONS()
         {
             DEPARTMENTS = new HashSet<DEPARTMENTS>();
@@ -33,7 +33,7 @@ namespace HumanResources.Models
 
         public virtual COUNTRIES COUNTRIES { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<DEPARTMENTS> DEPARTMENTS { get; set; }
     }
 }

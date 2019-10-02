@@ -8,7 +8,7 @@ namespace HumanResources.Models
 
     public partial class DEPARTMENTS
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+
         public DEPARTMENTS()
         {
             EMPLOYEES1 = new HashSet<EMPLOYEES>();
@@ -29,10 +29,10 @@ namespace HumanResources.Models
 
         public virtual LOCATIONS LOCATIONS { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<EMPLOYEES> EMPLOYEES1 { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<JOB_HISTORY> JOB_HISTORY { get; set; }
     }
 }

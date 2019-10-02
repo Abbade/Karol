@@ -48,7 +48,7 @@ namespace HumanResources.Models
                 .HasForeignKey(e => e.MANAGER_ID);
 
             modelBuilder.Entity<EMPLOYEES>()
-                .HasMany(e => e.EMPLOYEES1)
+                .HasMany(e => e.EMPLOYEES_MANAGER)
                 .WithOptional(e => e.MANAGER)
                 .HasForeignKey(e => e.MANAGER_ID);
 

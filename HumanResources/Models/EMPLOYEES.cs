@@ -8,11 +8,11 @@ namespace HumanResources.Models
 
     public partial class EMPLOYEES
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+      
         public EMPLOYEES()
         {
             DEPARTMENTS = new HashSet<DEPARTMENTS>();
-            EMPLOYEES1 = new HashSet<EMPLOYEES>();
+            EMPLOYEES_MANAGER = new HashSet<EMPLOYEES>();
             JOB_HISTORY = new HashSet<JOB_HISTORY>();
         }
 
@@ -50,16 +50,15 @@ namespace HumanResources.Models
 
         public decimal? COMMISSION_PCT { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+
         [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<DEPARTMENTS> DEPARTMENTS { get; set; }
 
         [Newtonsoft.Json.JsonIgnore]
         public virtual DEPARTMENTS DEPARTMENTS1 { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         [Newtonsoft.Json.JsonIgnore]
-        public virtual ICollection<EMPLOYEES> EMPLOYEES1 { get; set; }
+        public virtual ICollection<EMPLOYEES> EMPLOYEES_MANAGER { get; set; }
 
         [Newtonsoft.Json.JsonIgnore]
         public virtual EMPLOYEES MANAGER { get; set; }
@@ -67,7 +66,6 @@ namespace HumanResources.Models
         [Newtonsoft.Json.JsonIgnore]
         public virtual JOBS JOBS { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<JOB_HISTORY> JOB_HISTORY { get; set; }
     }

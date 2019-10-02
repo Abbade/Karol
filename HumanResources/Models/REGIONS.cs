@@ -8,7 +8,7 @@ namespace HumanResources.Models
 
     public partial class REGIONS
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+       
         public REGIONS()
         {
             COUNTRIES = new HashSet<COUNTRIES>();
@@ -20,7 +20,7 @@ namespace HumanResources.Models
         [StringLength(255)]
         public string REGION_NAME { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<COUNTRIES> COUNTRIES { get; set; }
     }
 }
